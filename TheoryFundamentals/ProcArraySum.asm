@@ -16,7 +16,7 @@ CALL ArraySum
 EXIT
 main ENDP
 
-ArraySum PROC 
+ArraySum PROC USES ecx eax esi
 	mov ecx, LENGTHOF myarray
 	mov eax, 0
 	mov esi, OFFSET myarray
