@@ -39,18 +39,18 @@ mov esi, OFFSET array
 		cmp bx, cx 
 		jge _endwhile
 
-		mov ax, sample 
-		cmp [esi + ebx*2], eax
+		mov dx, sample 
+		cmp [esi + ebx*2], dx
 		jg _notif
 
-		mov sample, ax
+		mov sample, dx
 
 		mov ax, sum
 		add ax, [esi + ebx*2]
 		mov sum, ax
 
 		_notif:
-		mov sample,ax
+		mov sample,dx
 		add bx, 1
 
 		jmp _while 
